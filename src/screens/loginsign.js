@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,ImageBackground,Image,TouchableOpacity,KeyboardAvoidingView,TextInput} from 'react-native';
 
+import {LatoText} from '../Components/LatoText'
 
 
 export default class loginSignup extends Component{
@@ -37,9 +38,9 @@ export default class loginSignup extends Component{
                
 
                 </TouchableOpacity>
-                <Text style={{paddingLeft:5,fontFamily:'Proxima-bd',fontSize:20}} >Remember me</Text>
+                <LatoText style={{paddingLeft:5,fontFamily:'Proxima-bd',fontSize:20}} >Remember me</LatoText>
               </View>
-              <TouchableOpacity ><Text style={{color:"#e10a6a",alignSelf:'flex-end'}}>forgot Password?</Text></TouchableOpacity>
+              <TouchableOpacity ><LatoText style={{color:"#e10a6a",alignSelf:'flex-end'}}>forgot Password?</LatoText></TouchableOpacity>
             
           </View>
           <TouchableOpacity 
@@ -51,7 +52,7 @@ export default class loginSignup extends Component{
                          borderRadius:5,
                          justifyContent:"center",
                         alignSelf:"center"}}>
-               <Text style={{fontSize:15,color:"white",fontFamily:'Proxima-bd',}}>SIGN IN</Text>
+               <LatoText style={{fontSize:15,color:"white",fontFamily:'Proxima-bd',}}>SIGN IN</LatoText>
              
               </View>
             </TouchableOpacity>
@@ -88,8 +89,8 @@ export default class loginSignup extends Component{
         <View style={{flexDirection:'row',marginTop:20,width:"100%",justifyContent:"center",paddingHorizontal:10}}>
             <View style={{flexDirection:"row",}}>
             
-               <Text style={{paddingLeft:10,fontSize:12}} >By Clicking 'REGISTER' I agree to our </Text>
-               <TouchableOpacity><Text  style={{color:'#e10a6a',fontSize:12}}>Term of Service</Text></TouchableOpacity>
+               <LatoText style={{paddingLeft:10,fontSize:12}} >By Clicking 'REGISTER' I agree to our </LatoText>
+               <TouchableOpacity><LatoText  style={{color:'#e10a6a',fontSize:12}}>Term of Service</LatoText></TouchableOpacity>
             </View>
           
           
@@ -101,7 +102,7 @@ export default class loginSignup extends Component{
                        borderRadius:5,
                        justifyContent:"center",
                       alignSelf:"center"}}>
-                <Text style={{fontSize:15,color:"white"}}>REGISTER</Text>
+                <LatoText style={{fontSize:15,color:"white"}}>REGISTER</LatoText>
            
             </View>
          </TouchableOpacity>
@@ -127,12 +128,12 @@ export default class loginSignup extends Component{
              
               <TouchableOpacity onPress={()=>this.setState({currentPage:'form1'})}
                   style={styles.logintext}>
-                <Text style={{color:this.state.currentPage==='form1'?'black':'lightgrey',fontSize:20,fontFamily:'Proxima-bd',
-}}>Login</Text>
+                <LatoText style={{color:this.state.currentPage==='form1'?'black':'lightgrey',fontSize:20,fontFamily:'Proxima-bd',
+}}>Login</LatoText>
               </TouchableOpacity>
               <TouchableOpacity onPress={()=>this.setState({currentPage:'form2'})}
                   style={styles.signup}>
-                <Text style={{color:this.state.currentPage==='form2'?'black':'lightgrey',fontSize:20,}}>Sign Up</Text>
+                <LatoText style={{color:this.state.currentPage==='form2'?'black':'lightgrey',fontSize:20,}}>Sign Up</LatoText>
               </TouchableOpacity>
           
             

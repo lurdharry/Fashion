@@ -3,6 +3,7 @@ import {Platform, StyleSheet,View,Dimensions,
         TouchableOpacity,Text,KeyboardAvoidingView,Image} from 'react-native';
 import {NavigationActions} from 'react-navigation'
 
+import {LatoText} from '../Components/LatoText'
 
 export default class SideMenu extends React.Component {
       navigateToScreen=(route)=>(
@@ -21,31 +22,31 @@ export default class SideMenu extends React.Component {
                         source={require('../assets/images/coloredlogo.png')}/>
             </View>
             <TouchableOpacity style={styles.links}>
-                  <Text>Home</Text>
+                  <LatoText>Home</LatoText>
             </TouchableOpacity>
             <TouchableOpacity 
                    onPress={this.navigateToScreen('Home2')}
                    style={[styles.links,{backgroundColor:this.props.activeKeyItem==='Home2'?'red':null}]}>
-                   <Text>Categories</Text>
+                   <LatoText>Categories</LatoText>
             </TouchableOpacity>
             <TouchableOpacity 
                         onPress={this.navigateToScreen('Cart')} 
                         style={[styles.links,{backgroundColor:this.props.activeKeyItem==='Cart'?'red':null}]}>
-                  <Text>My Bag</Text>
+                  <LatoText>My Bag</LatoText>
             </TouchableOpacity>
             <TouchableOpacity 
                         onPress={this.navigateToScreen('SelectedCloth')}
                         style={[styles.links,{backgroundColor:this.props.activeKeyItem==='SelectedCloth'?'red':null}]}>
-                  <Text>Wishlist</Text>
+                  <LatoText>Wishlist</LatoText>
             </TouchableOpacity>
             <TouchableOpacity style={styles.links}>
-                  <Text>Messages</Text>
+                  <LatoText>Messages</LatoText>
             </TouchableOpacity>
             <TouchableOpacity style={styles.links}>
-                  <Text>Profiles</Text>
+                  <LatoText>Profiles</LatoText>
             </TouchableOpacity>
             <TouchableOpacity style={styles.links}>
-                  <Text>settings</Text>
+                  <LatoText>settings</LatoText>
             </TouchableOpacity>
             
             

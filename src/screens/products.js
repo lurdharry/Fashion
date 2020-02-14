@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Image,StatusBar,Dimensions,TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {LatoText} from '../Components/LatoText'
 
 
 export default class Products extends Component{
@@ -12,7 +13,7 @@ export default class Products extends Component{
 		          <TouchableOpacity onPress={()=>this.props.navigation.openDrawer()}>
 		              <Image  source={require('../assets/images/nav.png')}  style= {styles.drawerIcon} />
 		          </TouchableOpacity>
-		          <Text style={{fontSize:15,color:'black',marginLeft:40}}>WOMEN</Text>
+		          <LatoText style={{fontSize:15,color:'black',marginLeft:40}}>WOMEN</LatoText>
               <View style={{flexDirection:'row'}}>
                 <TouchableOpacity
                       onPress={()=>this.props.navigation.navigate('Cart')}>
@@ -26,8 +27,8 @@ export default class Products extends Component{
           </View>
           <Image   source={require('../assets/images/gown.png')} style={{height:250,width:'100%',overlayColor:"pink"}}/>
           <View style={{marginTop:12,marginBottom:24,alignItems:'center'}}>
-                     <Text style={{fontSize:16,color:'black',marginTop:5,        fontFamily:'Lato',
-}}>CATEGORIES</Text>
+                     <LatoText style={{fontSize:16,color:'black',marginTop:5,        fontFamily:'Lato',
+}}>CATEGORIES</LatoText>
           </View>
           <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',paddingHorizontal:8,marginTop:20}}>
              
@@ -39,15 +40,15 @@ export default class Products extends Component{
           <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8}} >
                   <TouchableOpacity
                         onPress={()=>this.props.navigation.navigate('Dress')}>
-                     <Text style={{fontSize:15,color:'black',marginTop:8}}>Dresses</Text>
+                     <LatoText style={{fontSize:15,color:'black',marginTop:8}}>Dresses</LatoText>
                   </TouchableOpacity>
                   <TouchableOpacity
                         onPress={()=>this.props.navigation.navigate('Dress')}>
-                     <Text style={{fontSize:15,color:'black',marginTop:8}}>Outerwear</Text>
+                     <LatoText style={{fontSize:15,color:'black',marginTop:8}}>Outerwear</LatoText>
                   </TouchableOpacity>
                   <TouchableOpacity
                        onPress={()=>this.props.navigation.navigate('Dress')}>
-                     <Text style={{fontSize:15,color:'black',marginTop:8,marginLeft:10}}>lingerie</Text>
+                     <LatoText style={{fontSize:15,color:'black',marginTop:8,marginLeft:10}}>lingerie</LatoText>
                   </TouchableOpacity>
           </View>
           <View style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center',paddingHorizontal:8,marginTop:44}}>
@@ -58,9 +59,9 @@ export default class Products extends Component{
             
           </View>
           <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8,alignItems:'center',}} >
-             <Text style={{fontSize:15,color:'black',marginTop:8,marginLeft:10}}>Shoes</Text>
-             <Text style={{fontSize:15,color:'black',marginTop:8,marginLeft:20}}>Accessories</Text>
-             <Text style={{fontSize:15,color:'black',marginTop:8,marginLeft:5}}>Beauty</Text>
+             <LatoText style={{fontSize:15,color:'black',marginTop:8,marginLeft:10}}>Shoes</LatoText>
+             <LatoText style={{fontSize:15,color:'black',marginTop:8,marginLeft:20}}>Accessories</LatoText>
+             <LatoText style={{fontSize:15,color:'black',marginTop:8,marginLeft:5}}>Beauty</LatoText>
           </View>
               
                     

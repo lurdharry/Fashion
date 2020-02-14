@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet,Text, View,Image,StatusBar,Dimensions,TouchableOpacity,ScrollView,Picker} from 'react-native';
 
+import {LatoText} from '../Components/LatoText'
 
 
 export default class Selectedcloth extends React.Component{
@@ -19,17 +20,17 @@ export default class Selectedcloth extends React.Component{
   clothinfo(gh){
     if(gh=='1'){
         return(
-            <Text >AS SEEN IN REDBOOK! You'll be primed and ready in the Perfect Situation Purple Long Sleeve Shift Dress when everything starts falling into place! This woven poly dress has a casual shift shape, accented by a rounded neckline and long sleeves with lightly puffed shoulders. Sleeves end with matching button tabs on the fitted wrist cuffs. Hidden side seam pockets.</Text>
+            <LatoText >AS SEEN IN REDBOOK! You'll be primed and ready in the Perfect Situation Purple Long Sleeve Shift Dress when everything starts falling into place! This woven poly dress has a casual shift shape, accented by a rounded neckline and long sleeves with lightly puffed shoulders. Sleeves end with matching button tabs on the fitted wrist cuffs. Hidden side seam pockets.</LatoText>
         );
       }
     else if (gh=='2'){
       return(
-        <Text>ghj</Text>
+        <LatoText>ghj</LatoText>
       );
     }
     else if (gh=='3'){
       return(
-        <Text>fghj</Text>
+        <LatoText>fghj</LatoText>
       );
     }
     };
@@ -55,32 +56,32 @@ export default class Selectedcloth extends React.Component{
           <ScrollView>
              <Image   source={require('../assets/images/shortgown.png')} style={{height:452,width:'100%'}}/>
              <View style={{marginHorizontal:25,fontSize:16,marginTop:20,alignItems:'center'}}>
-                    <Text>Perfect Situation purple long sleeve shift shirt</Text>
+                    <LatoText>Perfect Situation purple long sleeve shift shirt</LatoText>
              </View>
              <View style={{flexDirection:'row',paddingHorizontal:17,marginTop:20,justifyContent:'space-between'}}>
                   <TouchableOpacity style={styles.sizeSelect}>
-                    <Text>XS</Text>
+                    <LatoText>XS</LatoText>
                   </TouchableOpacity>
                   <TouchableOpacity onPress={()=>this.selected()} style={[styles.sizeSelect,{backgroundColor:!this.state.checked?'blue':'lightgrey'}]}>
-                    <Text>S</Text>
+                    <LatoText>S</LatoText>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.sizeSelect}>
-                    <Text>M</Text>
+                    <LatoText>M</LatoText>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.sizeSelect}>
-                    <Text>L</Text>
+                    <LatoText>L</LatoText>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.sizeSelect}>
-                    <Text>XL</Text>
+                    <LatoText>XL</LatoText>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.sizeSelect}>
-                    <Text>XLL</Text>
+                    <LatoText>XLL</LatoText>
                   </TouchableOpacity>
                  
              </View>
              <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:10}}>
                 <View style={{flexDirection:'row',marginLeft:15}}>
-                  <Text style={{marginTop:15,fontSize:17,fontWeight:'bold'}}>Color:</Text>
+                  <LatoText style={{marginTop:15,fontSize:17,fontWeight:'bold'}}>Color:</LatoText>
                   <TouchableOpacity style={[styles.colorselect,{backgroundColor:'black'}]}></TouchableOpacity>
                   <TouchableOpacity style={[styles.colorselect,{backgroundColor:'lightgrey',marginLeft:15}]}></TouchableOpacity>
                   <TouchableOpacity style={[styles.colorselect,{backgroundColor:'skyblue',marginLeft:15}]}></TouchableOpacity>
@@ -102,7 +103,7 @@ export default class Selectedcloth extends React.Component{
                        borderRadius:5,
                        justifyContent:"center",
                       alignSelf:"center"}}>
-                        <Text style={{fontSize:15,color:"white"}}>Add to Cart</Text>
+                        <LatoText style={{fontSize:15,color:"white"}}>Add to Cart</LatoText>
            
                   </View>
              </TouchableOpacity>
@@ -111,21 +112,21 @@ export default class Selectedcloth extends React.Component{
                     <TouchableOpacity
                          style={{borderBottomWidth:this.state.info==='1'?3:0,paddingTop:15,paddingBottom:5}}
                         onPress={()=>this.setState({info:'1'})}>
-                     <Text style={{color:this.state.info=='1'?'black':'lightgrey'}}>DESCRIPTION</Text>
+                     <LatoText style={{color:this.state.info=='1'?'black':'lightgrey'}}>DESCRIPTION</LatoText>
                      </TouchableOpacity>
                
                
                    <TouchableOpacity
                        style={{borderBottomWidth:this.state.info==='2'?3:0,paddingTop:15,paddingBottom:5}}
                       onPress={()=>this.setState({info:'2'})}>
-                    <Text style={{color:this.state.info=='2'?'black':'lightgrey'}}>SIZE & FIT</Text>
+                    <LatoText style={{color:this.state.info=='2'?'black':'lightgrey'}}>SIZE & FIT</LatoText>
                    </TouchableOpacity>
                
                
                    <TouchableOpacity
                            style={{borderBottomWidth:this.state.info==='3'?3:0,paddingTop:15,paddingBottom:5}}
                            onPress={()=>this.setState({info:'3'})}>
-                    <Text style={{color:this.state.info=='3'?'black':'lightgrey'}}>MODEL INFO</Text>
+                    <LatoText style={{color:this.state.info=='3'?'black':'lightgrey'}}>MODEL INFO</LatoText>
                    </TouchableOpacity>
                
 

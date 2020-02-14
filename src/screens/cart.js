@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Image,StatusBar,Dimensions,TouchableOpacity,ScrollView,Picker} from 'react-native';
 
-
+import {LatoText} from '../Components/LatoText'
 
 export default class Cart extends React.Component{
  
@@ -12,7 +12,7 @@ export default class Cart extends React.Component{
 		          <TouchableOpacity onPress={()=>this.props.navigation.openDrawer()}>
 		              <Image  source={require('../assets/images/nav.png')} style={styles.drawerIcon} />
 		          </TouchableOpacity>
-              <Text  style={{marginLeft:40,fontSize:17}}>CART</Text>
+              <LatoText  style={{marginLeft:40,fontSize:17}}>CART</LatoText>
               <View style={{flexDirection:'row'}}>
                 <TouchableOpacity>
 		                <Image source={require('../assets/images/bag.png')} style= {styles.drawerIcon}  />
@@ -26,33 +26,33 @@ export default class Cart extends React.Component{
           <View style={styles.itemBox}>
                  <Image   style={{height:108,width:118}} source={require('../assets/images/bamboula.png')} />
                  <View style={{alignItems:'center',justifyContent:'center'}}>
-                   <Text style={{fontSize:12,color:'black',marginLeft:25}}>Bamboula  sisa Tote</Text>
-                   <Text style={{fontSize:16,marginTop:7}}>1 * $128.00</Text>
-                   <Text style={{fontSize:22,color:'black'}}>$128.00</Text>
+                   <LatoText style={{fontSize:12,color:'black',marginLeft:25}}>Bamboula  sisa Tote</LatoText>
+                   <LatoText style={{fontSize:16,marginTop:7}}>1 * $128.00</LatoText>
+                   <LatoText style={{fontSize:22,color:'black'}}>$128.00</LatoText>
                   
                  </View>
           </View>
           <View style={styles.itemBox}>
                  <Image   style={{height:108,width:118}} source={require('../assets/images/marbag.png')} />
                  <View style={{alignItems:'center',justifyContent:'center'}}>
-                   <Text style={{fontSize:12,color:'black',marginLeft:25}}>Mar Y Sol maffia</Text>
-                   <Text style={{fontSize:16,marginTop:7}}>1 * $98.00</Text>
-                   <Text style={{fontSize:22,color:'black'}}>$98.00</Text>
+                   <LatoText style={{fontSize:12,color:'black',marginLeft:25}}>Mar Y Sol maffia</LatoText>
+                   <LatoText style={{fontSize:16,marginTop:7}}>1 * $98.00</LatoText>
+                   <LatoText style={{fontSize:22,color:'black'}}>$98.00</LatoText>
                   
                  </View>
           </View>
           <View style={styles.itemBox}>
                  <Image   style={{height:108,width:118}} source={require('../assets/images/italianbag.png')} />
                  <View style={{alignItems:'center',justifyContent:'center'}}>
-                   <Text style={{fontSize:12,color:'black',marginLeft:25}}>Italian leather Drape</Text>
-                   <Text style={{fontSize:16,marginTop:7}}>1 * $178.00</Text>
-                   <Text style={{fontSize:22,color:'black'}}>$178.00</Text>
+                   <LatoText style={{fontSize:12,color:'black',marginLeft:25}}>Italian leather Drape</LatoText>
+                   <LatoText style={{fontSize:16,marginTop:7}}>1 * $178.00</LatoText>
+                   <LatoText style={{fontSize:22,color:'black'}}>$178.00</LatoText>
                   
                  </View>
           </View>
           <View style={styles.total}>
-              <Text style={{fontSize:16,marginTop:22}}>Total</Text>
-              <Text style={{fontSize:22,color:'black',marginTop:15}}>$328.00</Text>
+              <LatoText style={{fontSize:16,marginTop:22}}>Total</LatoText>
+              <LatoText style={{fontSize:22,color:'black',marginTop:15}}>$328.00</LatoText>
               <TouchableOpacity 
                   activeOpacity={0.75}>
                   <View style={{width:209,alignItems:"center", paddingVertical:15, backgroundColor:"#0052FF",
@@ -60,7 +60,7 @@ export default class Cart extends React.Component{
                        borderRadius:5,
                        justifyContent:"center",
                       alignSelf:"center"}}>
-                        <Text style={{fontSize:15,color:"white"}}>Check Out</Text>
+                        <LatoText style={{fontSize:15,color:"white"}}>Check Out</LatoText>
            
                   </View>
              </TouchableOpacity>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Image,StatusBar,Dimensions,TouchableOpacity,ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {LatoText} from '../Components/LatoText'
 
 
 export default class App extends React.Component{
@@ -25,9 +26,9 @@ export default class App extends React.Component{
           </View>
           <View>
              <Image   source={require('../assets/images/nav.png')} style={{height:45,width:'100%'}}/>
-             <Text style={{paddingHorizontal:12,fontSize:12}}>Perfect Situation purple long sleeve shift shirt</Text>
+             <LatoText style={{paddingHorizontal:12,fontSize:12}}>Perfect Situation purple long sleeve shift shirt</LatoText>
              <View style={{flexDirectio:'row',paddingHorizontal:17,marginTop:20}}>
-                            <Text>ASDFGHJKL;</Text>
+                            <LatoText>ASDFGHJKL;</LatoText>
              </View>
                     
                     
