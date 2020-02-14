@@ -13,28 +13,28 @@ export default class App extends React.Component {
       <View style={styles.container}>
          <View style={styles.topView}>
 		          <TouchableOpacity onPress={()=>this.props.navigation.openDrawer()}>
-		              <Image  source={require('../images/nav.png')}  style= {styles.drawerIcon} />
+		              <Image  source={require('../assets/images/nav.png')}  style= {styles.drawerIcon} />
 		          </TouchableOpacity>
 		          <Text style={{fontSize:15,color:'black',marginLeft:40}}>Dress</Text>
               <View style={{flexDirection:'row'}}>
                 <TouchableOpacity
                       onPress={()=>this.props.navigation.navigate('Cart')}>
-		                <Image  source={require('../images/bag.png')} style= {styles.drawerIcon}  />
+		                <Image  source={require('../assets/images/bag.png')} style= {styles.drawerIcon}  />
                 </TouchableOpacity>
 		      
                 <TouchableOpacity>
-		                <Image  source={require('../images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
+		                <Image  source={require('../assets/images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
                 </TouchableOpacity>
               </View>
           </View>
           <ScrollView style={{backgroundColor:'lightgrey',flex:1}}>
             <View style={{flexDirection:'row'}}>
                 <View style={styles.box}>
-                    <Image source={require('../images/shirt3.png')}
+                    <Image source={require('../assets/images/shirt3.png')}
                         style={styles.pic}/>
                     <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%'}}>
                         <Text>Kanvas Sneaker</Text>
-                        <Image source={require('../images/back.png')}
+                        <Image source={require('../assets/images/back.png')}
                             style={{height:24,width:'24'}}/> 
                     </View>
                     <Text>Shoes</Text>

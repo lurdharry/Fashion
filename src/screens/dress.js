@@ -24,17 +24,17 @@ export default class Dress extends React.Component {
       <View style={styles.container}>
          <View style={styles.topView}>
 		          <TouchableOpacity onPress={()=>this.props.navigation.openDrawer()}>
-		              <Image  source={require('../images/nav.png')}  style= {styles.drawerIcon} />
+		              <Image  source={require('../assets/images/nav.png')}  style= {styles.drawerIcon} />
 		          </TouchableOpacity>
 		          <Text style={{fontSize:15,color:'black',marginLeft:40}}>Dress</Text>
               <View style={{flexDirection:'row'}}>
                 <TouchableOpacity
                       onPress={()=>this.props.navigation.navigate('Cart')}>
-		                <Image  source={require('../images/bag.png')} style= {styles.drawerIcon}  />
+		                <Image  source={require('../assets/images/bag.png')} style= {styles.drawerIcon}  />
                 </TouchableOpacity>
 		      
                 <TouchableOpacity>
-		                <Image  source={require('../images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
+		                <Image  source={require('../assets/images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
                 </TouchableOpacity>
               </View>
           </View>
@@ -42,7 +42,7 @@ export default class Dress extends React.Component {
  
           <View style={{flexDirection:'row'}}>
                 <View style={styles.box}>
-                    <Image source={require('../images/shirt3.png')}
+                    <Image source={require('../assets/images/shirt3.png')}
                         style={styles.pic}/>
                     <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
                         <Text style={{fontSize:15}}>Kanvas Sneaker</Text>
@@ -57,41 +57,7 @@ export default class Dress extends React.Component {
 
                 </View>
                 <View style={styles.box}>
-                    <Image source={require('../images/shirt.png')}
-                        style={styles.pic}/>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
-                        <Text style={{fontSize:15}}>Kanvas Sneaker</Text>
-                        <FontAwesome name='navicon' size={15} color='black'/>
-                    </View>
-                    <Text style={{paddingLeft:5}}>Shoes</Text>
-                    <View style={styles.star}>
-                        <Stars/>
-                        <Text style={{color:'blue',fontSize:12,}}>$ 59.00</Text>
-                    </View>
-
-
-                </View>
-                
-
-            </View>
-            <View style={{flexDirection:'row'}}>
-                <View style={styles.box}>
-                    <Image source={require('../images/shirt4.png')}
-                        style={styles.pic}/>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
-                        <Text style={{fontSize:15}}>Kanvas Sneaker</Text>
-                        <FontAwesome name='navicon' size={15} color='black'/>
-                    </View>
-                    <Text style={{paddingLeft:5}}>Shoes</Text>
-                    <View style={styles.star}>
-                        <Stars/>
-                        <Text style={{color:'blue',fontSize:12,}}>$ 59.00</Text>
-                    </View>
-
-
-                </View>
-                <View style={styles.box}>
-                    <Image source={require('../images/shirt5.png')}
+                    <Image source={require('../assets/images/shirt.png')}
                         style={styles.pic}/>
                     <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
                         <Text style={{fontSize:15}}>Kanvas Sneaker</Text>
@@ -110,7 +76,7 @@ export default class Dress extends React.Component {
             </View>
             <View style={{flexDirection:'row'}}>
                 <View style={styles.box}>
-                    <Image source={require('../images/shirt6.png')}
+                    <Image source={require('../assets/images/shirt4.png')}
                         style={styles.pic}/>
                     <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
                         <Text style={{fontSize:15}}>Kanvas Sneaker</Text>
@@ -125,7 +91,41 @@ export default class Dress extends React.Component {
 
                 </View>
                 <View style={styles.box}>
-                    <Image source={require('../images/shirt2.png')}
+                    <Image source={require('../assets/images/shirt5.png')}
+                        style={styles.pic}/>
+                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
+                        <Text style={{fontSize:15}}>Kanvas Sneaker</Text>
+                        <FontAwesome name='navicon' size={15} color='black'/>
+                    </View>
+                    <Text style={{paddingLeft:5}}>Shoes</Text>
+                    <View style={styles.star}>
+                        <Stars/>
+                        <Text style={{color:'blue',fontSize:12,}}>$ 59.00</Text>
+                    </View>
+
+
+                </View>
+                
+
+            </View>
+            <View style={{flexDirection:'row'}}>
+                <View style={styles.box}>
+                    <Image source={require('../assets/images/shirt6.png')}
+                        style={styles.pic}/>
+                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
+                        <Text style={{fontSize:15}}>Kanvas Sneaker</Text>
+                        <FontAwesome name='navicon' size={15} color='black'/>
+                    </View>
+                    <Text style={{paddingLeft:5}}>Shoes</Text>
+                    <View style={styles.star}>
+                        <Stars/>
+                        <Text style={{color:'blue',fontSize:12,}}>$ 59.00</Text>
+                    </View>
+
+
+                </View>
+                <View style={styles.box}>
+                    <Image source={require('../assets/images/shirt2.png')}
                         style={styles.pic}/>
                     <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
                         <Text style={{fontSize:15}}>Kanvas Sneaker</Text>

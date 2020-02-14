@@ -18,7 +18,7 @@ export default class SideMenu extends React.Component {
       <View style={styles.container}>
             <View>
                   <Image style={styles.coloredlogo}
-                        source={require('../images/coloredlogo.png')}/>
+                        source={require('../assets/images/coloredlogo.png')}/>
             </View>
             <TouchableOpacity style={styles.links}>
                   <Text>Home</Text>

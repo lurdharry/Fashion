@@ -7,16 +7,16 @@ export default class IntroPage2 extends Component{
   render() {
     return (
       <ImageBackground style={styles.container}
-                        source={require('../images/background.png')}>
+                        source={require('../assets/images/background.png')}>
              <Image style={styles.logo}
-                        source={require('../images/logo.png')}>
+                        source={require('../assets/images/logo.png')}>
              </Image>
              <TouchableOpacity
                      style={styles.rightarrow}
                     onPress={()=>this.props.navigation.navigate('loginPage')}>
                 <Image 
                     style={{height:17,width:46}}
-                        source={require('../images/leftarrow.png')}>
+                        source={require('../assets/images/leftarrow.png')}>
                 </Image>
               </TouchableOpacity>
               <TouchableOpacity
@@ -24,11 +24,11 @@ export default class IntroPage2 extends Component{
                     onPress={()=>this.props.navigation.navigate('IntroPage')}>
                 <Image 
                       style={{ height:19,width:10}}
-                        source={require('../images/leftarrow.png')}>
+                        source={require('../assets/images/leftarrow.png')}>
                 </Image>
               </TouchableOpacity>
              <Image style={styles.sliderDots}
-                        source={require('../images/SliderDots.png')}>
+                        source={require('../assets/images/SliderDots.png')}>
              </Image>   
       </ImageBackground>
     );

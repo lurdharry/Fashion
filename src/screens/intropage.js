@@ -12,13 +12,13 @@ export default class IntroPage extends Component{
                     style={styles.rightarrow}
                     onPress={()=>this.props.navigation.navigate('IntroPage2')}>
                   <Image style={{ height:8,width:60}}
-                        source={require('../images/rightarrow.png')}>
+                        source={require('../assets/images/rightarrow.png')}>
                  </Image>
              </TouchableOpacity>
             
             
              <Image style={styles.sliderDots}
-                        source={require('../images/SliderDots.png')}>
+                        source={require('../assets/images/SliderDots.png')}>
              </Image>  
           
       </View>

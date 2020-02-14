@@ -38,22 +38,22 @@ export default class Selectedcloth extends React.Component{
 		   <View style={styles.Container}>
 		      <View style={styles.topView}>
 		          <TouchableOpacity onPress={()=>this.props.navigation.openDrawer()}>
-		              <Image  source={require('../images/back.png')} style={{height:14,width:21}} />
+		              <Image  source={require('../assets/images/back.png')} style={{height:14,width:21}} />
 		          </TouchableOpacity>
-                  <Image  source={require('../images/coloredlogo.png')}  style={{height:22,width:29,marginLeft:40}}/>
+                  <Image  source={require('../assets/images/coloredlogo.png')}  style={{height:22,width:29,marginLeft:40}}/>
               <View style={{flexDirection:'row'}}>
                 <TouchableOpacity
                       onPress={()=>this.props.navigation.navigate('Cart')}>
-		                <Image  source={require('../images/bag.png')} style= {styles.drawerIcon}  />
+		                <Image  source={require('../assets/images/bag.png')} style= {styles.drawerIcon}  />
                 </TouchableOpacity>
 		      
                 <TouchableOpacity>
-		                <Image  source={require('../images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
+		                <Image  source={require('../assets/images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
                 </TouchableOpacity>
               </View>
           </View>
           <ScrollView>
-             <Image   source={require('../images/shortgown.png')} style={{height:452,width:'100%'}}/>
+             <Image   source={require('../assets/images/shortgown.png')} style={{height:452,width:'100%'}}/>
              <View style={{marginHorizontal:25,fontSize:16,marginTop:20,alignItems:'center'}}>
                     <Text>Perfect Situation purple long sleeve shift shirt</Text>
              </View>

@@ -14,7 +14,7 @@ export default class loginSignup extends Component{
           <KeyboardAvoidingView style={[styles.container,{marginTop:35,height:'45%'}]}>
           <View style={styles.loginbox2}>
              <View style={{marginTop:15,paddingHorizontal:10}} >
-                   <Image  style={{height:12,width:15,}}source={require('../images/mailicon.png')}/>
+                   <Image  style={{height:12,width:15,}}source={require('../assets/images/mailicon.png')}/>
              </View>
               <View style={{width:'80%'}}>
              <TextInput  placeholder='Email'/>
@@ -22,7 +22,7 @@ export default class loginSignup extends Component{
           </View>
           <View style={[styles.loginbox2,{marginTop:20}]}>
              <View style={{marginTop:10,paddingHorizontal:10}} >
-                   <Image  style={{height:20,width:15,}}source={require('../images/passwordicon.png')}/>
+                   <Image  style={{height:20,width:15,}}source={require('../assets/images/passwordicon.png')}/>
              </View>
               <View style={{width:'80%'}}>
              <TextInput style={{fontSize:15}} placeholder='Password'/>
@@ -63,7 +63,7 @@ export default class loginSignup extends Component{
         <KeyboardAvoidingView style={[styles.container,{marginTop:30,height:"60%"}]}>
         <View style={styles.loginbox2}>
             <View style={{marginTop:15,paddingHorizontal:10}} >
-                 <Image  style={{height:12,width:15,}}source={require('../images/mailicon.png')}/>
+                 <Image  style={{height:12,width:15,}}source={require('../assets/images/mailicon.png')}/>
             </View>
             <View style={{width:'80%'}}>
                  <TextInput  placeholder='Email'/>
@@ -71,7 +71,7 @@ export default class loginSignup extends Component{
         </View>
         <View style={[styles.loginbox2,{marginTop:15}]}>
             <View style={{marginTop:10,paddingHorizontal:10}} >
-                 <Image  style={{height:20,width:15,}}source={require('../images/passwordicon.png')}/>
+                 <Image  style={{height:20,width:15,}}source={require('../assets/images/passwordicon.png')}/>
             </View>
             <View style={{width:'80%'}}>
                  <TextInput style={{fontSize:15}} placeholder='Password'/>
@@ -79,7 +79,7 @@ export default class loginSignup extends Component{
         </View>
         <View style={[styles.loginbox2,{marginTop:15}]}>
              <View style={{marginTop:10,paddingHorizontal:10}} >
-                 <Image  style={{height:20,width:15,}}source={require('../images/passwordicon.png')}/>
+                 <Image  style={{height:20,width:15,}}source={require('../assets/images/passwordicon.png')}/>
              </View>
              <View style={{width:'80%'}}>
                  <TextInput style={{fontSize:15}} placeholder='Confirm Password'/>
@@ -114,7 +114,7 @@ export default class loginSignup extends Component{
       <KeyboardAvoidingView style={styles.container}>
           <View style={styles.loginbox}>
                 <Image style={styles.loginbox}
-                        source={require('../images/loginlogo.png')}>
+                        source={require('../assets/images/loginlogo.png')}>
                 </Image>
           </View>
           <KeyboardAvoidingView style={{width:"100%",flex:1,paddingHorizontal:5}}>
@@ -122,7 +122,7 @@ export default class loginSignup extends Component{
           </KeyboardAvoidingView>
         
           <Image style={styles.coloredlogo}
-                        source={require('../images/coloredlogo.png')}>
+                        source={require('../assets/images/coloredlogo.png')}>
              </Image>
              
               <TouchableOpacity onPress={()=>this.setState({currentPage:'form1'})}

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet,View,Dimensions,
         TouchableOpacity,Text,KeyboardAvoidingView} from 'react-native';
-import AppContainer from './Components/navigation.js'
+import AppContainer from './src/screens/MainNavigation'
 
 export default class App extends React.Component {
   render() {
