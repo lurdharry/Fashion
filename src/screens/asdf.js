@@ -10,21 +10,21 @@ export default class App extends React.Component{
 		   <View style={styles.Container}>
 		      <View style={styles.topView}>
 		          <TouchableOpacity onPress={()=>this.props.navigation.openDrawer()}>
-		              <Image  source={require('./images/nav.png')}  style= {styles.drawerIcon} />
+		              <Image  source={require('../assets/images/nav.png')}  style= {styles.drawerIcon} />
 		          </TouchableOpacity>
-                  <Image  source={require('./images/nav.png')}  style={[styles.drawerIcon,{marginLeft:40}]}/>
+                  <Image  source={require('../assets/images/nav.png')}  style={[styles.drawerIcon,{marginLeft:40}]}/>
               <View style={{flexDirection:'row'}}>
                 <TouchableOpacity>
-		                <Image  source={require('./images/bag.png')} style= {styles.drawerIcon}  />
+		                <Image  source={require('../assets/images/bag.png')} style= {styles.drawerIcon}  />
                 </TouchableOpacity>
 		      
                 <TouchableOpacity>
-		                <Image  source={require('./images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
+		                <Image  source={require('../assets/images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
                 </TouchableOpacity>
               </View>
           </View>
           <View>
-             <Image   source={require('./images/nav.png')} style={{height:45,width:'100%'}}/>
+             <Image   source={require('../assets/images/nav.png')} style={{height:45,width:'100%'}}/>
              <Text style={{paddingHorizontal:12,fontSize:12}}>Perfect Situation purple long sleeve shift shirt</Text>
              <View style={{flexDirectio:'row',paddingHorizontal:17,marginTop:20}}>
                             <Text>ASDFGHJKL;</Text>

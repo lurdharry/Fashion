@@ -10,21 +10,21 @@ export default class Cart extends React.Component{
 		   <View style={styles.Container}>
 		      <View style={styles.topView}>
 		          <TouchableOpacity onPress={()=>this.props.navigation.openDrawer()}>
-		              <Image  source={require('../images/nav.png')} style={styles.drawerIcon} />
+		              <Image  source={require('../assets/images/nav.png')} style={styles.drawerIcon} />
 		          </TouchableOpacity>
               <Text  style={{marginLeft:40,fontSize:17}}>CART</Text>
               <View style={{flexDirection:'row'}}>
                 <TouchableOpacity>
-		                <Image source={require('../images/bag.png')} style= {styles.drawerIcon}  />
+		                <Image source={require('../assets/images/bag.png')} style= {styles.drawerIcon}  />
                 </TouchableOpacity>
 		      
                 <TouchableOpacity>
-		                <Image  source={require('../images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
+		                <Image  source={require('../assets/images/Search.png')}style= {[styles.drawerIcon,{marginLeft:25}]} />
                 </TouchableOpacity>
               </View>
           </View>
           <View style={styles.itemBox}>
-                 <Image   style={{height:108,width:118}} source={require('../images/bamboula.png')} />
+                 <Image   style={{height:108,width:118}} source={require('../assets/images/bamboula.png')} />
                  <View style={{alignItems:'center',justifyContent:'center'}}>
                    <Text style={{fontSize:12,color:'black',marginLeft:25}}>Bamboula  sisa Tote</Text>
                    <Text style={{fontSize:16,marginTop:7}}>1 * $128.00</Text>
@@ -33,7 +33,7 @@ export default class Cart extends React.Component{
                  </View>
           </View>
           <View style={styles.itemBox}>
-                 <Image   style={{height:108,width:118}} source={require('../images/marbag.png')} />
+                 <Image   style={{height:108,width:118}} source={require('../assets/images/marbag.png')} />
                  <View style={{alignItems:'center',justifyContent:'center'}}>
                    <Text style={{fontSize:12,color:'black',marginLeft:25}}>Mar Y Sol maffia</Text>
                    <Text style={{fontSize:16,marginTop:7}}>1 * $98.00</Text>
@@ -42,7 +42,7 @@ export default class Cart extends React.Component{
                  </View>
           </View>
           <View style={styles.itemBox}>
-                 <Image   style={{height:108,width:118}} source={require('../images/italianbag.png')} />
+                 <Image   style={{height:108,width:118}} source={require('../assets/images/italianbag.png')} />
                  <View style={{alignItems:'center',justifyContent:'center'}}>
                    <Text style={{fontSize:12,color:'black',marginLeft:25}}>Italian leather Drape</Text>
                    <Text style={{fontSize:16,marginTop:7}}>1 * $178.00</Text>
