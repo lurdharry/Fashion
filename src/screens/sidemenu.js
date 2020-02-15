@@ -39,7 +39,8 @@ export default class SideMenu extends React.Component {
                         style={[styles.links,{backgroundColor:this.props.activeKeyItem==='SelectedCloth'?'red':null}]}>
                   <LatoText>Wishlist</LatoText>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.links}>
+            <TouchableOpacity onPress={this.navigateToScreen('Chats')}
+                        style={[styles.links,{backgroundColor:this.props.activeKeyItem==='Chats'?'red':null}]}>
                   <LatoText>Messages</LatoText>
             </TouchableOpacity>
             <TouchableOpacity style={styles.links}>
