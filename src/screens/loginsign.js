@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,ImageBackground,Image,TouchableOpacity,KeyboardAvoidingView,TextInput} from 'react-native';
 
-import {LatoText} from '../Components/LatoText'
+import {LatoText} from '../Components/LatoText.js'
 
 
 export default class loginSignup extends Component{
@@ -38,7 +38,7 @@ export default class loginSignup extends Component{
                
 
                 </TouchableOpacity>
-                <LatoText style={{paddingLeft:5,fontFamily:'Proxima-bd',fontSize:20}} >Remember me</LatoText>
+                <LatoText style={{paddingLeft:5,fontSize:20}} >Remember me</LatoText>
               </View>
               <TouchableOpacity ><LatoText style={{color:"#e10a6a",alignSelf:'flex-end'}}>forgot Password?</LatoText></TouchableOpacity>
             
@@ -128,7 +128,7 @@ export default class loginSignup extends Component{
              
               <TouchableOpacity onPress={()=>this.setState({currentPage:'form1'})}
                   style={styles.logintext}>
-                <LatoText style={{color:this.state.currentPage==='form1'?'black':'lightgrey',fontSize:20,fontFamily:'Proxima-bd',
+                <LatoText style={{color:this.state.currentPage==='form1'?'black':'lightgrey',fontSize:20,
 }}>Login</LatoText>
               </TouchableOpacity>
               <TouchableOpacity onPress={()=>this.setState({currentPage:'form2'})}
