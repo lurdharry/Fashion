@@ -7,6 +7,7 @@ import LoginSignup from "./loginsign.js";
 import myDrawer from './drawernav';
 import Cart from './cart.js';
 import Dress from './dress.js';
+import Chats from './Chats'
 
 
 
@@ -16,7 +17,7 @@ export const mainNavigation = createStackNavigator (
        IntroPage2:{screen:IntroPage2},
        loginPage:{screen:LoginSignup}, 
        DrawerNav:{screen:myDrawer},
-    //    Cart:{screen:Cart},
+       Chats:{screen:Chats},
     //    Dress:{screen:Dress},
       
     },)
