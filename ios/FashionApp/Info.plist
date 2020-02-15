@@ -70,6 +70,17 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>Comic.ttf</string>
+		<string>icomoon.ttf</string>
+		<string>Lato-bd.ttf</string>
+		<string>Lato-rg.ttf</string>
+		<string>Lato.ttf</string>
+		<string>Mont-rg.ttf</string>
+		<string>Proxima-bd.ttf</string>
+		<string>Proxima-light.ttf</string>
+		<string>Proxima-md.ttf</string>
+		<string>Proxima-rg.ttf</string>
+		<string>Proxima-sm.ttf</string>
 	</array>
 </dict>
 </plist>

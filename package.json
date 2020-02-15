@@ -1,4 +1,10 @@
+
 {
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts"
+    ]
+  },
   "name": "FashionApp",
   "version": "0.0.1",
   "private": true,
