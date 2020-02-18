@@ -6,6 +6,7 @@ import {LatoText} from '../Components/LatoText'
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
+import {DressData} from '../Components/DressData'
 var dw= Dimensions.get('window').width;
 var dh= Dimensions.get('window').height;
 const Stars=()=>{
@@ -28,7 +29,7 @@ export default class Dress extends React.Component {
 		          <TouchableOpacity onPress={()=>this.props.navigation.openDrawer()}>
 		              <Image  source={require('../assets/images/nav.png')}  style= {styles.drawerIcon} />
 		          </TouchableOpacity>
-		          <LatoText style={{fontSize:15,color:'black',marginLeft:40}}>Dress</LatoText>
+		          <LatoText style={{fontSize:15,color:'black',marginLeft:40}}>Dresses</LatoText>
               <View style={{flexDirection:'row'}}>
                 <TouchableOpacity
                       onPress={()=>this.props.navigation.navigate('Cart')}>
@@ -40,109 +41,20 @@ export default class Dress extends React.Component {
                 </TouchableOpacity>
               </View>
           </View>
-          <ScrollView style={{backgroundColor:'lightgrey',flex:1}}>
+          <ScrollView style={{backgroundColor:'lightgrey',flex:1,}}>
+             <View style={{flexDirection:'row',flexWrap:'wrap',marginVertical:10}}>
+              {
+                  DressData.map((item,index)=>{
+                      return(
+                          <ItemCarousel
+                            key={index}
+                            details={item}
+                          />
+                      )
+                  })
+              }
  
-          <View style={{flexDirection:'row'}}>
-                <View style={styles.box}>
-                    <Image source={require('../assets/images/shirt3.png')}
-                        style={styles.pic}/>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
-                        <LatoText style={{fontSize:15}}>Kanvas Sneaker</LatoText>
-                        <FontAwesome name='navicon' size={15} color='black'/>
-                    </View>
-                    <LatoText style={{paddingLeft:5}}>Shoes</LatoText>
-                    <View style={styles.star}>
-                        <Stars/>
-                        <LatoText style={{color:'blue',fontSize:12,}}>$ 59.00</LatoText>
-                    </View>
-
-
-                </View>
-                <View style={styles.box}>
-                    <Image source={require('../assets/images/shirt.png')}
-                        style={styles.pic}/>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
-                        <LatoText style={{fontSize:15}}>Kanvas Sneaker</LatoText>
-                        <FontAwesome name='navicon' size={15} color='black'/>
-                    </View>
-                    <LatoText style={{paddingLeft:5}}>Shoes</LatoText>
-                    <View style={styles.star}>
-                        <Stars/>
-                        <LatoText style={{color:'blue',fontSize:12,}}>$ 59.00</LatoText>
-                    </View>
-
-
-                </View>
-                
-
-            </View>
-            <View style={{flexDirection:'row'}}>
-                <View style={styles.box}>
-                    <Image source={require('../assets/images/shirt4.png')}
-                        style={styles.pic}/>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
-                        <LatoText style={{fontSize:15}}>Kanvas Sneaker</LatoText>
-                        <FontAwesome name='navicon' size={15} color='black'/>
-                    </View>
-                    <LatoText style={{paddingLeft:5}}>Shoes</LatoText>
-                    <View style={styles.star}>
-                        <Stars/>
-                        <LatoText style={{color:'blue',fontSize:12,}}>$ 59.00</LatoText>
-                    </View>
-
-
-                </View>
-                <View style={styles.box}>
-                    <Image source={require('../assets/images/shirt5.png')}
-                        style={styles.pic}/>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
-                        <LatoText style={{fontSize:15}}>Kanvas Sneaker</LatoText>
-                        <FontAwesome name='navicon' size={15} color='black'/>
-                    </View>
-                    <LatoText style={{paddingLeft:5}}>Shoes</LatoText>
-                    <View style={styles.star}>
-                        <Stars/>
-                        <LatoText style={{color:'blue',fontSize:12,}}>$ 59.00</LatoText>
-                    </View>
-
-
-                </View>
-                
-
-            </View>
-            <View style={{flexDirection:'row'}}>
-                <View style={styles.box}>
-                    <Image source={require('../assets/images/shirt6.png')}
-                        style={styles.pic}/>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
-                        <LatoText style={{fontSize:15}}>Kanvas Sneaker</LatoText>
-                        <FontAwesome name='navicon' size={15} color='black'/>
-                    </View>
-                    <LatoText style={{paddingLeft:5}}>Shoes</LatoText>
-                    <View style={styles.star}>
-                        <Stars/>
-                        <LatoText style={{color:'blue',fontSize:12,}}>$ 59.00</LatoText>
-                    </View>
-
-
-                </View>
-                <View style={styles.box}>
-                    <Image source={require('../assets/images/shirt2.png')}
-                        style={styles.pic}/>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
-                        <LatoText style={{fontSize:15}}>Kanvas Sneaker</LatoText>
-                        <FontAwesome name='navicon' size={15} color='black'/>
-                    </View>
-                    <LatoText style={{paddingLeft:5}}>Shoes</LatoText>
-                    <View style={styles.star}>
-                        <Stars/>
-                        <LatoText style={{color:'blue',fontSize:12,}}>$ 59.00</LatoText>
-                    </View>
-
-                </View>
-                
-
-            </View>
+            </View> 
           </ScrollView>
            
       </View>
@@ -150,7 +62,26 @@ export default class Dress extends React.Component {
   }
 }
 
+const ItemCarousel=(props)=>{
+    const {category,price,name,img} =props.details
+    return(
+    <View style={styles.box}>
+        <Image source={img} resizeMode='contain'
+            style={styles.pic}/>
+        <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',paddingHorizontal:5,marginTop:5}}>
+            <LatoText style={{fontSize:15}}>{name}</LatoText>
+            {/* <FontAwesome name='navicon' size={15} color='black'/> */}
+        </View>
+        {/* <LatoText style={{paddingLeft:5,color:'black'}}>{category}</LatoText> */}
+        <View style={styles.star}>
+            <Stars/>
+            <LatoText style={{color:'blue',fontSize:12,}}>$ {price}</LatoText>
+        </View>
 
+    </View>
+    )
+
+}
 
 
 
@@ -184,6 +115,7 @@ const styles = StyleSheet.create({
       borderWidth:1,
       marginHorizontal:7,
       marginTop:8,
+      borderRadius:5,
       backgroundColor:"white",
       borderColor:'white'
   },
