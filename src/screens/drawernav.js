@@ -6,7 +6,7 @@ import Products from './products.js';
 import Cart from './cart';
 import SelectedCloth from './selectedcloth'
 import Dress from './dress'
-
+import Chats from './Chats'
 export const DrawerNavigator = createDrawerNavigator (
   {
     Home:{screen:Products},
@@ -14,6 +14,8 @@ export const DrawerNavigator = createDrawerNavigator (
     Cart:{screen:Cart},
     SelectedCloth:{screen:SelectedCloth},
     Dress:{screen:Dress},
+    Chats:{screen:Chats},
+
     
   },
   {
