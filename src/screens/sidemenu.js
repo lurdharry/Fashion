@@ -14,6 +14,7 @@ export default class SideMenu extends React.Component {
             this.props.navigation.dispatch(NavigationAction);
       }
       )
+
   render() {
     return (
       <View style={styles.container}>
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
     marginLeft:20
   },
   links:{
-    marginTop:10,
+//     marginTop:10,
     width:'100%',
     marginTop:25,
     marginLeft:20,
