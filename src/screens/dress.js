@@ -25,6 +25,7 @@ export default class Dress extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        {/* HEADER */}
          <View style={styles.topView}>
 		          <TouchableOpacity onPress={()=>this.props.navigation.openDrawer()}>
 		              <Image  source={require('../assets/images/nav.png')}  style= {styles.drawerIcon} />
@@ -41,6 +42,7 @@ export default class Dress extends React.Component {
                 </TouchableOpacity>
               </View>
           </View>
+          {/* end of header */}
           <ScrollView style={{backgroundColor:'lightgrey',flex:1,}}>
              <View style={{flexDirection:'row',flexWrap:'wrap',marginVertical:10}}>
               {
