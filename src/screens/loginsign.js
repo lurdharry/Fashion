@@ -1,15 +1,41 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,ImageBackground,Image,TouchableOpacity,KeyboardAvoidingView,TextInput} from 'react-native';
-
+import {Platform, StyleSheet, Text, View,ImageBackground,Image,TouchableOpacity,KeyboardAvoidingView,TextInput,Alert,ActivityIndicator} from 'react-native';
+import firebase from 'react-native-firebase';
 import {LatoText} from '../Components/LatoText.js'
 
 
 export default class loginSignup extends Component{
   state={
     currentPage:'form1',
-    checked:false
+    checked:false,
+    email:'',
+    password:'',
+    ConfirmPass:'',
+    showErrorModal:false,
+    loading:false,
   }
-  loginsignup(){
+  signup=()=>{
+      if(this.state.email===''){
+          Alert.alert('Enter your Email')
+      }
+      else if(this.state.password===''){
+        Alert.alert('Enter your Password')
+      }
+      else if (this.state.password.length<5){
+        Alert.alert('Password must be more than four characters')
+      }
+      else if (this.state.password!==this.state.ConfirmPass){
+        Alert.alert('Password Does not Match, Try again')
+      }
+      else{
+        this.setState({loading:true})
+        firebase.auth().createUserWithEmailAndPassword(this.state.email,this.state.password)
+        .then(()=>this.setState({loading:false}),
+        this.props.navigation.navigate('DrawerNav'))
+        .catch((error)=>Alert.alert(error.message))
+      }
+  }
+  loginsignupForm(){
     if(this.state.currentPage==='form1'){
         return(
           <KeyboardAvoidingView style={[styles.container,{marginTop:35,height:'45%'}]}>
@@ -18,7 +44,12 @@ export default class loginSignup extends Component{
                    <Image  style={{height:12,width:15,}}source={require('../assets/images/mailicon.png')}/>
              </View>
               <View style={{width:'80%'}}>
-             <TextInput  placeholder='Email'/>
+             <TextInput
+                value={this.state.email}
+                onChangeText={(text)=>this.setState({email:text})}
+
+                placeholder='Email'
+              />
              </View>
           </View>
           <View style={[styles.loginbox2,{marginTop:20}]}>
@@ -26,7 +57,11 @@ export default class loginSignup extends Component{
                    <Image  style={{height:20,width:15,}}source={require('../assets/images/passwordicon.png')}/>
              </View>
               <View style={{width:'80%'}}>
-             <TextInput style={{fontSize:15}} placeholder='Password'/>
+             <TextInput style={{fontSize:15}}
+              value={this.state.password}
+              onChangeText={(text)=>this.setState({password:text})}
+              placeholder='Password'
+            />
              </View>
           </View>
           <View style={{flexDirection:'row',marginTop:25,width:"100%",justifyContent:"space-between",paddingHorizontal:10}}>
@@ -53,6 +88,10 @@ export default class loginSignup extends Component{
                          justifyContent:"center",
                         alignSelf:"center"}}>
                <LatoText style={{fontSize:15,color:"white",fontFamily:'Proxima-bd',}}>SIGN IN</LatoText>
+               {
+                this.state.loading&&
+                <ActivityIndicator size={20} color='white'/>
+              }
              
               </View>
             </TouchableOpacity>
@@ -67,7 +106,10 @@ export default class loginSignup extends Component{
                  <Image  style={{height:12,width:15,}}source={require('../assets/images/mailicon.png')}/>
             </View>
             <View style={{width:'80%'}}>
-                 <TextInput  placeholder='Email'/>
+                 <TextInput
+                value={this.state.email}
+                onChangeText={(text)=>this.setState({email:text})}
+                 placeholder='Email'/>
             </View>
         </View>
         <View style={[styles.loginbox2,{marginTop:15}]}>
@@ -75,7 +117,10 @@ export default class loginSignup extends Component{
                  <Image  style={{height:20,width:15,}}source={require('../assets/images/passwordicon.png')}/>
             </View>
             <View style={{width:'80%'}}>
-                 <TextInput style={{fontSize:15}} placeholder='Password'/>
+                 <TextInput style={{fontSize:15}}
+                 value={this.state.password}
+                 onChangeText={(text)=>this.setState({password:text})}
+                 placeholder='Password'/>
            </View>
         </View>
         <View style={[styles.loginbox2,{marginTop:15}]}>
@@ -83,7 +128,10 @@ export default class loginSignup extends Component{
                  <Image  style={{height:20,width:15,}}source={require('../assets/images/passwordicon.png')}/>
              </View>
              <View style={{width:'80%'}}>
-                 <TextInput style={{fontSize:15}} placeholder='Confirm Password'/>
+                 <TextInput style={{fontSize:15}}
+                 value={this.state.ConfirmPass}
+                 onChangeText={(text)=>this.setState({ConfirmPass:text})}
+                 placeholder='Confirm Password'/>
              </View>
         </View>
         <View style={{flexDirection:'row',marginTop:20,width:"100%",justifyContent:"center",paddingHorizontal:10}}>
@@ -96,14 +144,20 @@ export default class loginSignup extends Component{
           
         </View>
         <TouchableOpacity 
+            onPress={()=>this.signup()}
             activeOpacity={0.75}>
             <View style={{width:"92%",alignItems:"center", paddingVertical:15, backgroundColor:"#e10a6a",
                        marginTop:17.8,
                        borderRadius:5,
+                       flexDirection:'row',
                        justifyContent:"center",
-                      alignSelf:"center"}}>
-                <LatoText style={{fontSize:15,color:"white"}}>REGISTER</LatoText>
-           
+                      alignSelf:"center"}}
+            >
+              <LatoText style={{fontSize:15,color:"white"}}>REGISTER</LatoText>
+              {
+                this.state.loading&&
+                <ActivityIndicator size={20} color='white'/>
+              }
             </View>
          </TouchableOpacity>
        </KeyboardAvoidingView>
@@ -119,7 +173,7 @@ export default class loginSignup extends Component{
                 </Image>
           </View>
           <KeyboardAvoidingView style={{width:"100%",flex:1,paddingHorizontal:5}}>
-              {this.loginsignup()}
+              {this.loginsignupForm()}
           </KeyboardAvoidingView>
         
           <Image style={styles.coloredlogo}
